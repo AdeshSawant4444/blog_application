@@ -68,8 +68,10 @@ def add_blogs(request):
 
 class UpdatePostView(UpdateView):
     model = BlogPost 
+    form_class = BlogPostForm
     template_name = 'edit_blog_post.html'
-    fields = ['title', 'slug', 'content']
+    #fields = "__all__"
+    success_url = '/'
     
 
 
